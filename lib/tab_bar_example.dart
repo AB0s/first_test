@@ -271,7 +271,21 @@ class _TabBarExampleState extends State<TabBarExample>
   }
 
   void _saveForm() {
-    // Implement save form functionality here
-    print('Form saved');
+    // Show snackbar on successful form save
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: Duration(milliseconds: 1500),
+        content: Text('Форма успешно сохранена'),
+        dismissDirection: DismissDirection.up,
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Colors.green,
+        margin: EdgeInsets.only(
+          top: 20,
+          left: 20,
+          right: 20,
+          bottom: MediaQuery.of(context).size.height-MediaQuery.of(context).size.height*0.2
+        ),
+      ),
+    );
   }
 }

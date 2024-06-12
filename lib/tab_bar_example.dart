@@ -59,7 +59,7 @@ class _TabBarExampleState extends State<TabBarExample>
   bool isFormComplete() {
     return selectedEmotion != null &&
         selectedItems.isNotEmpty &&
-        notesController.text.isNotEmpty;
+        notesController.text.length>1;
   }
 
   @override
@@ -81,7 +81,7 @@ class _TabBarExampleState extends State<TabBarExample>
               );
             },
           ),
-          SizedBox(
+          const SizedBox(
             width: 15,
           )
         ],
@@ -232,7 +232,7 @@ class _TabBarExampleState extends State<TabBarExample>
                         controller: notesController,
                         onChanged: (text) {
                           setState(() {
-                            // Update the button state when the text changes
+                            notesController.text=text;
                           });
                         },
                         size: size,

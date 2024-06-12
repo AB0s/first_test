@@ -77,7 +77,11 @@ class AdditionalContent extends StatelessWidget {
                     color: Colors.transparent, // Makes the border invisible
                   ),
                 ),
-                label: Text(item),
+                label: Text(
+                  item,
+                  style: TextStyle(
+                      color: isSelected ? Colors.white:Colors.black),
+                ),
                 backgroundColor: isSelected ? Color(0xFFFF8702) : Colors.white,
               ),
             ),

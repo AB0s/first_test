@@ -16,7 +16,6 @@ class AdditionalContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> additionalItems = [];
-
     switch (emotion) {
       case 'Радость':
         additionalItems = [
